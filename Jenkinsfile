@@ -1,9 +1,14 @@
 pipeline {
 	agent { label 'docker-agent' }
 	stages {
-		stage("Hello") {
+		stage("Clone stage") {
 			steps {
-				echo 'Hello World'
+				git 'https://gitlab.com/tanchito/nodejs-todolist'
+			}
+		}
+		stage("Build stage"){
+			steps {
+				sh label: '', script: 'docker build -t nodejs-todolist .'
 			}
 		}
 	}	
