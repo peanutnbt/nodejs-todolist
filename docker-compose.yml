@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
    db:
       image: handuy1992/postgres
       environment:
