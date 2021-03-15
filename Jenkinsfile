@@ -3,14 +3,13 @@ pipeline {
 	stages {
 		stage("Clone stage") {
 			steps {
-				#git 'https://gitlab.com/tanchito/nodejs-todolist'
-				git 'https://github/peanutnbt/nodejs-todolist'
+				git 'https://github.com/peanutnbt/nodejs-todolist'
 			}
 		}
 		stage("Build stage"){
 			steps {
 				sh label: '', script: 'docker build -t nodejs-todolist .'
-				sh label: '', script: 'docker-compose up -d'
+				//sh label: '', script: 'docker-compose up -d'
 			}
 		}
 	}
