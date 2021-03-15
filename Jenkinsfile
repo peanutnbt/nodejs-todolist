@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage("Clone stage") {
 			steps {
-				git 'https://github/peanutnbt/nodejs-todolist' 
+				git 'https://github.com/peanutnbt/nodejs-todolist' 
 			}
 		}
 		stage("Build stage"){
